@@ -33,7 +33,7 @@ Features
 
 Screenshots
 
-![Uploading image.png…]()
+[![Uploading image.png…]()](https://ibb.co/XJVd9bS)
 
 
 Technologies Used
