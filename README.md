@@ -33,7 +33,7 @@ Features
 
 Screenshots
 
-[[![Uploading image.png…]()](https://ibb.co/XJVd9bS)](https://ibb.co/XJVd9bS)
+[[[![Uploading image.png…]()](https://ibb.co/XJVd9bS)](https://ibb.co/XJVd9bS)](https://imgur.com/meZ9K6m)
 
 
 Technologies Used
