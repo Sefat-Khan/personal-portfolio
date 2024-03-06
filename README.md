@@ -49,6 +49,8 @@ How to Use
 1. Clone the repository: git clone https://github.com/Sefat-Khan/personal-portfolio.git
 
 2. Open the index.html file in your web browser.
+
+3.Preview: https://sefat-khan.github.io/personal-portfolio/ 
    
 Contact Information
 
