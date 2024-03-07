@@ -345,6 +345,10 @@ h3{
     gap: 1rem;
 }
 
+.progress h4{
+    color: red;
+}
+
 .language{
     width: 100%;
     display: flex;
