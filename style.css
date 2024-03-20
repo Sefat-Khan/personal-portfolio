@@ -26,20 +26,21 @@
 /* header starts */
 body{
     background: linear-gradient(120deg, black 0%, rgb(37, 35, 35) 100%);
-    color: var(--text-color);
     padding-inline: 2rem;
     height: auto;
+    height: 100vh;
 }
 header{
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
+    height: auto;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 70px;
+    padding: 1rem 30px;
     background: linear-gradient(240deg, black 0%, rgb(37, 35, 35) 100%);
 }
 .logo {
@@ -112,38 +113,17 @@ section{
 .home{
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
     gap: 1.5rem;
     z-index: 0;
+    margin-top: 5rem;
 }
 
-.home::after{
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 23rem;
-    height: 23rem;
-    border: 2px solid;
-    background: linear-gradient(var(--angle), 
-    #c05555,  #cf2727, rgb(202, 2, 2));
-    border-radius: 0.5rem;
-    animation: rotate 2s linear infinite;
-    clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
-}
-
-.home::after{
-    rotate: 135deg;
-    right: 14.5%;
-    filter: opacity(10px);
-}
-
-@keyframes rotate {
-    0%     { --angle: 0deg; }
-    100%   { --angle: 360deg;
-    }
+.home-image {
+    position: relative;
 }
 
 .home-image img{
@@ -172,24 +152,30 @@ section{
     }
 }
 
-.home-image::after{
+.home-image::before{
     content: "";
     position: absolute;
     z-index: 1;
-    width: 2rem;
-    height: 7rem;
-    border: 2px solid rgb(230, 12, 12);
-    border-radius: 5rem 0.5rem;
+    width: 23rem;
+    height: 23rem;
+    border: 2px solid;
     background: linear-gradient(var(--angle), 
     #c05555,  #cf2727, rgb(202, 2, 2));
+    border-radius: 0.5rem;
     animation: rotate 2s linear infinite;
+    clip-path: polygon(100% 0%, 100% 100%, 50% 80%, 0% 100%, 0% 0%);
 }
 
-.home-image::after{
+.home-image::before{
     rotate: 135deg;
-    top: 15.7%;
-    right: 36.9%;
+    right: 7.5%;
     filter: opacity(10px);
+}
+
+@keyframes rotate {
+    0%     { --angle: 0deg; }
+    100%   { --angle: 360deg;
+    }
 }
 
 
@@ -278,6 +264,7 @@ section{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-top: 5rem;
 }
 
 .project-info{
@@ -374,7 +361,7 @@ h3{
     text-align: center;
     line-height: 30px;
     color: white;
-    transition: width 1s ease;
+    transition: width 3s ease;
   }
 
 
@@ -399,6 +386,7 @@ h3{
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-top: 5rem;
 }
 
 h2{
@@ -422,12 +410,15 @@ h2{
     align-items: center;
     gap: 2rem;
     height: auto;
+    margin-top: 5rem;
 }
 
 .contact-area{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 3rem;
 }
 
@@ -485,24 +476,6 @@ h2{
         --h2-font:2rem;
     }
 
-    .home::after{
-        right: 12.5%;
-    }
-    .home-image::after{
-        right: 38.3%;
-    }
-}
-
-@media (max-width: 1440px) {
-
-    .home::after{
-        right: 11.7%
-    }
-
-    .home-image::after{
-        right: 39.4%;
-    }
-    
 }
 
 @media (max-width: 1140px){
@@ -549,14 +522,6 @@ h2{
         font-size: 3.5rem;
     }
 
-    .home::after{
-        right: 10.7%;
-    }
-
-    .home-image::after{
-        right: 46.6%;
-    }
-
     .work-all .work-list{
         position: absolute;
         top: -500px;
@@ -582,19 +547,20 @@ h2{
 }
 
 @media (max-width: 850px) {
-    .home-image::after{
-        top: 20.7%;
-        right: 48.2%;
-    }
 
-    .home::after{
+    .home-image::before{
         width: 18rem;
         height: 18rem;
-        right: 10.0%;
+        right: 8%;
+        top: 2%;
     }
 }
 
 @media (max-width: 720px){
+
+    body {
+        height: 100vh;
+    }
     header{
         padding: 10px 16px;
     }
@@ -613,21 +579,15 @@ h2{
         gap: 4rem;
     }
 
-    .home::after{
+    .home-image::before{
         width: 19rem;
         height: 19rem;
-        right: 27.5%;
-        top: 46%;
+        right: 5%;
+        top: 2%;
     }
 
     .home-image{
         width: 331px;
-    }
-
-    .home-image::after{
-        height: 5rem;
-        top: 39.7%;
-        right: 72.7%;
     }
 
     .home-text{
@@ -660,14 +620,14 @@ h2{
 
 @media (max-width: 500px){
 
-    .home::after{
-        right: 16.3%;
-        top: 51%;
+    body{
+        height: auto;
     }
 
-    .home-image::after{
-        top: 43.7%;
-        right: 85.7%;
+    .home-image::before{
+        right: 16.3%;
+        top: 2%;
+        right: 7%;
     }
 
     .contact-icon{

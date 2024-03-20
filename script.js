@@ -17,3 +17,26 @@ function updateProgressBars() {
 
   // Call the function to start the progress bars
   updateProgressBars();
+
+  // button 
+
+  const project1Btn = document.getElementById('project1-button');
+  const project2Btn = document.getElementById('project2-button');
+  const gitBtn = document.querySelectorAll('git-button');
+
+  project1Btn.addEventListener('click', () => {
+    window.open('https://sefat-khan.github.io/ecommerce-product-page-main/');
+
+  });
+
+  project2Btn.addEventListener('click', () => {
+    window.open('https://sefat-khan.github.io/Time-Tracking-dashboard/');
+
+  });
+
+  gitBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        const githubLink = button.querySelector('a').href;
+        window.open(githubLink);
+    });
+});
